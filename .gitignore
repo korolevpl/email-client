@@ -1,2 +1,10 @@
 /.idea/
 /email-client.iml
+/client/client.iml
+/model/model.iml
+/communication/communication.iml
+/server/server.iml
+/client/target/
+/communication/target/
+/model/target/
+/server/target/
