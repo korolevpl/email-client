@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+
+<?import javafx.scene.control.Button?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.TitledPane?>
+<HBox alignment="CENTER_LEFT" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ru.ifmo.email.emailclient.controller.EmailClientController">
+<!-- Write email   -->
+    <VBox alignment="TOP_LEFT">
+
+        <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        </padding>
+
+        <Label>Email address:</Label>
+        <TextField fx:id="fldEmailAddress"/>
+        <Label>Title:</Label>
+        <TextField fx:id="fldMsgTitle"/>
+        <Label>Message:</Label>
+        <TextArea fx:id="txtEmailContent"/>
+        <Button text="Send" onAction="#onSendEmailButtonClick"/>
+    </VBox>
+
+<!--  Read emails  -->
+    <VBox minWidth="300.0">
+        <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        </padding>
+        <Label>Inbox</Label>
+        <Button text="Refresh" onAction="#onRefreshButtonClick"/>
+        <Accordion fx:id="accInbox">
+            <panes>
+            </panes>
+        </Accordion>
+    </VBox>
+</HBox>
+
