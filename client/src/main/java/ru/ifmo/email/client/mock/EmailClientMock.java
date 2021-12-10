@@ -1,4 +1,4 @@
-package ru.ifmo.email.client.client;
+package ru.ifmo.email.client.mock;
 
 import ru.ifmo.email.client.EmailClient;
 import ru.ifmo.email.client.exception.EmailClientException;
@@ -8,12 +8,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class EmailClient implements ru.ifmo.email.client.EmailClient {
+public class EmailClientMock implements EmailClient {
     private final List<Message> inbox = new ArrayList<>();
     private final String senderEmail;
 
 
-    public EmailClient(String senderEmail) {
+    public EmailClientMock(String senderEmail) {
         this.senderEmail = senderEmail;
         // Заполняем тестовыми данными
         inbox.addAll(

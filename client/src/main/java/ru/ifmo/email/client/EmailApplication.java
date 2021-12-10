@@ -6,7 +6,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import ru.ifmo.email.client.controller.EmailClientController;
 import ru.ifmo.email.client.exception.EmailClientException;
-import ru.ifmo.email.client.client.EmailClient;
+import ru.ifmo.email.client.mock.EmailClientMock;
 
 import java.io.IOException;
 
@@ -17,7 +17,7 @@ public class EmailApplication extends Application {
         validateEmail(email);
 
         // Здесь должна быть ваша реализация клиента, вместо mock.
-        final ru.ifmo.email.client.EmailClient emailClient = new EmailClient(email);
+        final EmailClient emailClient = new EmailClientMock(email);
         emailClient.registerMyEmail(email);
 
 

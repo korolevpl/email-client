@@ -15,6 +15,6 @@ module ru.ifmo.email.emailclient {
     opens ru.ifmo.email.client.exception to javafx.fxml;
     exports ru.ifmo.email.client.controller;
     opens ru.ifmo.email.client.controller to javafx.fxml;
-    exports ru.ifmo.email.client.client;
-    opens ru.ifmo.email.client.client to javafx.fxml;
+    exports ru.ifmo.email.client.mock;
+    opens ru.ifmo.email.client.mock to javafx.fxml;
 }
